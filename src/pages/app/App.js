@@ -6,6 +6,7 @@ function App() {
   const handleUpdate = () => {
     alert(`Buscar usuario no GitHub`);
   }
+
   return (
     <Layout onUpdate={handleUpdate}>
       <Profile user={user} />

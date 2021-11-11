@@ -3,8 +3,8 @@ import { Repository } from './Repository';
 
 test('renders repository component', () => {
     render(<Repository />);
-    const repos = screen.getByText(/Repositories/i);
-    const stars = screen.getByText(/Starred/i);
+    const repos = screen.getByRole('tab', {name:'Repositories'});
+    const stars = screen.getByRole('tab', {name:'Starred'});
     expect(repos).toBeInTheDocument();
     expect(stars).toBeInTheDocument();
 });

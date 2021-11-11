@@ -25,7 +25,7 @@ Fará o buid da aplicação para posterior deploy em produção. Para maiores de
 
 ### Estrutura de pastas
 
-A estrutura de pastas usadas neste projeto é um pouco diferente dá que foi apresentada pelo instrutor. Os motivos de ter feio esta escolha foram: para fins de implementar alguns testes unitários nos componentes e utilizar a abordagem TDD; para aprendizado de componentização, experimentando uma maior divisão e especialização nos componentes.
+A estrutura de pastas usadas neste projeto é um pouco diferente dá que foi apresentada pelo instrutor. Os motivos de ter feito esta escolha foram: para fins de implementar alguns testes unitários nos componentes e utilizar a abordagem TDD; para aprendizado de componentização, experimentando uma maior divisão e especialização nos componentes.
 
 ### Testes unitários
 
