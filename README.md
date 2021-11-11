@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Criando um front-end totalmente componentizado na prática com ReactJS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto foi criado com o [Create React App](https://github.com/facebook/create-react-app)  e é a atividade prática da aula **Criando um front-end totalmente componentizado na prática com ReactJS** que faz parte do bootcamp da Eduzz.
 
-## Available Scripts
+## Scripts
 
-In the project directory, you can run:
+Para inicar o projeto, entre na respectiva pasta, e execute:
 
 ### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Executa o projeto no modo desenvolvimento.
+Para visualizar acesse a url [http://localhost:3000](http://localhost:3000) em seu browser.
 
 ### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Executa o test runner no modo interativo, ativando o modo watch o que fará com que as modificações no código disparem nova execução dos testes.
 
 ### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Fará o buid da aplicação para posterior deploy em produção. Para maiores detalhes consultar a seção [deployment](https://facebook.github.io/create-react-app/docs/deployment) da docmentação do React.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Observações
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Estrutura de pastas
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+A estrutura de pastas usadas neste projeto é um pouco diferente dá que foi apresentada pelo instrutor. Os motivos de ter feio esta escolha foram: para fins de implementar alguns testes unitários nos componentes e utilizar a abordagem TDD; para aprendizado de componentização, experimentando uma maior divisão e especialização nos componentes.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Testes unitários
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Durante o projeto tentei ao máximo utilizar a abordagem TDD, de forma que para vários dos compenentes existe o teste correspondente. Sendo que para cada funcionalidade adicional procurei antes de implemetnar a funcionaliade criar o respectivo teste unitário
 
-## Learn More
+### Interface
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Apesar da mudança na estrutura das pastas e dos componentes e também da inclusão dos testes, na medida do possível mantive a mesma interface que foi apresentada pelo instrutor e para isso reaproveitei, fazendo as devidas adaptações, o CSS fornecido no projeto original da aula.
