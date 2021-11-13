@@ -1,10 +1,10 @@
 import { Button } from '../shared';
 import styled from "styled-components";
 
-export const Layout = ({children, onUpdate}) => {
+export const Layout = ({children, onUpdate, onChange}) => {
     return (
         <section style={ {margin: 16} }>
-            <WrapperLayout role="main" aria-label="layout">
+            <WrapperLayout role="main" aria-label="layout" onChange={onChange}>
     {/*             <input type="text" id="buscar" />
                 <label for="buscar">Nome usuário</label> */}
                 <div>

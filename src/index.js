@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ResetCSS } from './global/resetCSS';
-import App from './pages/app/App';
+import Providers from "./providers";
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 ReactDOM.render(
   <React.StrictMode>
-    <ResetCSS />
-    <App />
+    <Providers />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );

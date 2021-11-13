@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 import { StatusCount } from './StatusCount';
 import { UserData } from './UserData';
+import useGithub from "../../hooks/github-hooks";
 
 export const Profile = (props) => {
-    const {user} = props;
+    const { githubState } = useGithub();
+    const user = githubState.user;
     return(
         <Card role="separator" aria-label="profile">
-            <Avatar alt="Github Avatar" src={user.avatar_url}/>
+            <Avatar alt="Github Avatar" src={user.avatar}/>
              {/* <div style={ {display: "flex", } }> */}
                 <UserGeneric>
                     <UserData user={user}/>

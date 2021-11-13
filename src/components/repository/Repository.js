@@ -1,12 +1,30 @@
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Tabs, TabList, Tab, TabPanel } from "react-tabs";
 import 'react-tabs/style/react-tabs.css';
 import RepositoryItem from '../shared/RepositoryItem';
-import { repos, starred } from '../../mock/data';
+//import { repos, starred } from '../../mock/data';
+import useGithub from "../../hooks/github-hooks";
 
 export const Repository = (props) => {
-    //const {repos, starred} = props;
-   
+    const { githubState, getUserRepos, getUserStarred } = useGithub();
+    const repos = githubState.repositories;
+    const starred =  githubState.starred;
+    const [hasUserForSearchrepos, setHasUserForSearchrepos] = useState(false);
+
+
+    useEffect(() => {
+      if (githubState.user.login) {
+        getUserRepos(githubState.user.login);
+        getUserStarred(githubState.user.login);
+      }
+      setHasUserForSearchrepos(githubState.repositories);
+  
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [githubState.user.login]);
+  
+
+
     return(
         <MyTabs>
          <MyTabList aria-label="repository">
@@ -86,7 +104,7 @@ const MyTabPanel = styled(TabPanel)`
   }
 `;
 
-export const ListItem = styled.div`
+const ListItem = styled.div`
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
