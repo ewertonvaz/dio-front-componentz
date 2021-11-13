@@ -5,7 +5,7 @@ import NoSearch from "../../components/shared/no-search";
 import useGithub from "../../hooks/github-hooks";
 
 function App() {
-  const { getUser } = useGithub();
+  const { githubState, getUser } = useGithub();
   const [usernameForSearch, setUsernameForSearch] = useState();
 
   const submitGetUser = () => {
@@ -13,11 +13,11 @@ function App() {
     return getUser(usernameForSearch);
   };
 
-  const { githubState } = useGithub();
+  //const { githubState } = useGithub();
 
   return (
     <Layout onUpdate={submitGetUser} onChange={(event) => setUsernameForSearch(event.target.value)}>
-      {githubState.hasUser ? (
+      { (githubState.hasUser || githubState.mockData) ? (
         <>
           {githubState.loading ? (
             <p>Loading</p>

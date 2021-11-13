@@ -1,9 +1,8 @@
 import axios from "axios";
 
-console.log(process.env);
-//const baseURL = 'https://api.github.com/';
-
+//const baseURL = process.env.GIT_HUB_API_URL;
 const baseURL = 'https://api.github.com/';
+
 const api = axios.create({
   baseURL,
 });

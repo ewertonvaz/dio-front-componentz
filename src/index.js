@@ -7,7 +7,7 @@ dotenv.config();
 
 ReactDOM.render(
   <React.StrictMode>
-    <Providers />
+    <Providers mockData={false}/>
   </React.StrictMode>,
   document.getElementById("root")
 );

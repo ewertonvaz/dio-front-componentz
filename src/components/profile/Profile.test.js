@@ -1,9 +1,9 @@
 import { render, screen } from '@testing-library/react';
 import { Profile } from './Profile';
-import { user as usuario} from '../../mock/data' ;
+import Providers from '../../providers';
 
 test('renders profile component', () => {
-    render(<Profile user={usuario}/>);
+    render(<Providers mockData={true} />);
     const imagem = screen.getByRole('img', { name: 'Github Avatar' });
     const name = screen.getByRole('heading', {name: 'Nome do Usuário'});
     const user = screen.getByRole('heading', {name: 'username'});

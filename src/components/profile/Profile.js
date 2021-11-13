@@ -2,9 +2,17 @@ import styled from 'styled-components';
 import { StatusCount } from './StatusCount';
 import { UserData } from './UserData';
 import useGithub from "../../hooks/github-hooks";
+import { useEffect } from "react";
 
-export const Profile = (props) => {
-    const { githubState } = useGithub();
+export const Profile = () => {
+    const { githubState, getUser } = useGithub();
+
+    useEffect(() => {
+        if (githubState.mockData) {
+          getUser('Mock User');
+        }
+      }, [githubState.mockData]);
+
     const user = githubState.user;
     return(
         <Card role="separator" aria-label="profile">

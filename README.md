@@ -34,3 +34,11 @@ Durante o projeto tentei ao máximo utilizar a abordagem TDD, de forma que para 
 ### Interface
 
 Apesar da mudança na estrutura das pastas e dos componentes e também da inclusão dos testes, na medida do possível mantive a mesma interface que foi apresentada pelo instrutor e para isso reaproveitei, fazendo as devidas adaptações, o CSS fornecido no projeto original da aula.
+
+### Dados mockados
+
+Implementei um mock de dados para fins de teste da aplicação e melhorar o funcionamento dos testes unitários. Para ativar o mock abrir o arquivo **src\index.js** e fazer a seguinte alteração:
+### `<Providers mockData={true}/>`
+
+Para voltar ao funcionameto normal basta alterar a propriedade **mockData** acima para false.
+

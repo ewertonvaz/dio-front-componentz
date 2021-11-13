@@ -2,7 +2,7 @@ export const user = {
     "login": "ewertonvaz",
     "id": 5659976,
     "node_id": "MDQ6VXNlcjU2NTk5NzY=",
-    "avatar_url": "https://avatars.githubusercontent.com/u/5659976?v=4",
+    "avatar": "https://avatars.githubusercontent.com/u/5659976?v=4",
     "gravatar_id": "",
     "url": "https://api.github.com/users/ewertonvaz",
     "html_url": "https://github.com/ewertonvaz",
